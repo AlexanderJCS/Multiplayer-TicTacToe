@@ -2,7 +2,7 @@
 A multiplayer tictactoe game using Python.
 
 DIRECTIONS FOR HOSTING A GAME:
-1. Open the "host.py" python file using an IDE. Under the IP constant, change the string to your local IP (under default gateway in ipconfig in Windows).
+1. Open the "host.py" python file using an IDE. Under the IP constant, change the string to your local IP (under default gateway in ipconfig for Windows).
 2. If you want people to connect outside of your local network, port forward port 1234 (or whatever port the constant is set to).
 3. Finally run the python file (this was made using Python 3.8 so no guarantees it works with other versions). Hosting setup is done.
 
