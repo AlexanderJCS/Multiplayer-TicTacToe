@@ -110,16 +110,14 @@ while True:
             except IndexError:
                 print("Please input valid formatting: \"x, y\"")
 
-        # Check if the move the player executed is valid.
-        if valid_move(move_x, move_y):
-            move = [move_x, move_y]
-            move = pickle.dumps(move)
-            client_socket.send(move)
-            break
-
-        else:
+        if not valid_move(move_x, move_y):
             print("Invalid move.")
             continue
+
+        move = [move_x, move_y]
+        move = pickle.dumps(move)
+        client_socket.send(move)
+        break
 
     # Check if the client won
     win_check = client_socket.recv(HEADER_LENGTH).decode("utf-8")

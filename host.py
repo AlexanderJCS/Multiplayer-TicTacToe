@@ -29,9 +29,10 @@ server_socket.listen(2)
 clients = []
 
 
-def manage_clients():
+def manage_clients():  # Candle clients connecting and disconnecting
     clientsocket, address = server_socket.accept()
 
+    # Accepts only 1 client
     if len(clients) > 1:
         clientsocket.close()
 
@@ -126,12 +127,12 @@ def restart_game():  # Restart the round and switch which player goes first
     time.sleep(2)
 
 
-t = threading.Thread(target=manage_clients)
-t.start()
-
-
-# Main game loop
+# Main game
 if __name__ == "__main__":
+
+    t = threading.Thread(target=manage_clients)
+    t.start()
+
     print("Waiting for player to connect...")
 
     # Wait for player
