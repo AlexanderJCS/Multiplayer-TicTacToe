@@ -1,7 +1,7 @@
 # Multiplayer-TicTacToe
 A multiplayer tictactoe game using Python.
 
-__**This project is discontinued and is in a very buggy state.**__
+**This project is discontinued and is in a very buggy state.**
 
 DIRECTIONS FOR HOSTING A GAME:
 1. Open the "host.py" python file using an IDE. Under the IP constant, change the string to your local IP (under default gateway in ipconfig for Windows).
