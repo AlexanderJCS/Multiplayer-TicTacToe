@@ -17,7 +17,7 @@ moves = 0
 
 HEADERSIZE = 64
 
-IP = "YOUR LOCAL IP"
+IP = socket.gethostbyname(socket.gethostname())
 PORT = 1234
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
